@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "m@crypto.com",
+      "password": "123",
+      "nombre": "Olivia Mansfield",
+      "alias": "M",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "bond@crypto.com",
+      "password": "123",
+      "nombre": "James Bond",
+      "alias": "007",
+      "role": "agente"
+    },
+    {
+      "id": 3,
+      "email": "hunt@crypto.com",
+      "password": "123",
+      "nombre": "Ethan Hunt",
+      "alias": "ECHO",
+      "role": "agente"
+    }
+  ],
+  "aspirantes": [
+    {
+      "id": 1,
+      "nombre": "Jason Bourne",
+      "alias": "TREADSTONE",
+      "email": "jason@unknown.com",
+      "nacionalidad": "América"
+    }
+  ],
+  "misiones": [
+    {
+      "id": 1,
+      "codigo": "GHOST-001",
+      "titulo": "Operación Sombra",
+      "descripcion": "Recuperar microchip en embajada.",
+      "secreto": "Alto",
+      "estado": "Activa",
+      "agenteId": 2
+    },
+    {
+      "id": 2,
+      "codigo": "ECHO-882",
+      "titulo": "Rescate Alpino",
+      "descripcion": "Extracción de VIP en Suiza.",
+      "secreto": "Medio",
+      "estado": "Pendiente",
+      "agenteId": 3
+    },
+    {
+      "id": 3,
+      "codigo": "OMEGA-99",
+      "titulo": "Protocolo Caída del Cielo",
+      "descripcion": "Interceptar satélite fuera de órbita.",
+      "secreto": "Critico",
+      "estado": "Pendiente",
+      "agenteId": null
+    }
+  ]
+}
