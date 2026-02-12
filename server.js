@@ -31,7 +31,7 @@ server.post('/login', (req, res) => {
     return res.status(401).json({ message: 'Credenciales incorrectas, agente.' });
   }
 
-  const token = createToken({ id: user.id, email: user.email, role: user.role, alias: user.alias });
+  const token = createToken({ id: user.id, name: user.name, email: user.email, role: user.role, alias: user.alias });
   
   // Devolvemos token y datos básicos del usuario (sin password)
   const { password: _, ...userWithoutPassword } = user;
