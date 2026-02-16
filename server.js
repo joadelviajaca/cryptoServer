@@ -30,8 +30,8 @@ server.post('/login', (req, res) => {
   if (!user) {
     return res.status(401).json({ message: 'Credenciales incorrectas, agente.' });
   }
-
-  const token = createToken({ id: user.id, name: user.name, email: user.email, role: user.role, alias: user.alias });
+  console.log('User: ', user)
+  const token = createToken({ id: user.id, nombre: user.nombre, email: user.email, role: user.role, alias: user.alias });
   
   // Devolvemos token y datos básicos del usuario (sin password)
   const { password: _, ...userWithoutPassword } = user;
@@ -46,6 +46,7 @@ server.get('/verify', (req, res) => {
   const token = authHeader.split(' ')[1];
   try {
     const decoded = jwt.verify(token, SECRET_KEY);
+    console.log('Decoded: ', decoded)
     res.status(200).json({ valid: true, user: decoded });
   } catch (err) {
     res.status(401).json({ valid: false, message: 'Token expirado o inválido' });
